@@ -1,5 +1,7 @@
 resource "aws_s3_bucket" "tfstate" {
   bucket = "m6-tfstate-ws${var.workshop_id}"
+
+  force_destroy = true
 }
 
 resource "aws_s3_bucket_versioning" "versioning" {
